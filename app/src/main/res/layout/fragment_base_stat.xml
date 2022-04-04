@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/hp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAttack"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/attack"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDefense"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/defense"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAttack" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpecialAttack"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/special_attack"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDefense" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpecialDefense"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/special_defense"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSpecialAttack" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/speed"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toStartOf="@id/glInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSpecialDefense" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgHP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/black"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvHp"
+        app:layout_constraintEnd_toStartOf="@id/tvHpNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvHp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHpNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvHp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHp" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgAttack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvAttack"
+        app:layout_constraintEnd_toStartOf="@id/tvAttackNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvAttack" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAttackNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvAttack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAttack" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgDefense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvDefense"
+        app:layout_constraintEnd_toStartOf="@id/tvDefenseNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvDefense" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDefenseNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvDefense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDefense" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgSpecialAttack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpecialAttack"
+        app:layout_constraintEnd_toStartOf="@id/tvSpecialAttackNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvSpecialAttack" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpecialAttackNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpecialAttack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSpecialAttack" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgSpecialDefense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpecialDefense"
+        app:layout_constraintEnd_toStartOf="@id/tvSpecialDefenseNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvSpecialDefense" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpecialDefenseNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpecialDefense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSpecialDefense" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pgSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpeed"
+        app:layout_constraintEnd_toStartOf="@id/tvSpeedNumber"
+        app:layout_constraintStart_toEndOf="@id/glInfo"
+        app:layout_constraintTop_toTopOf="@id/tvSpeed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSpeedNumber"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textAppearance="@style/TextAppearance.OpenSans.Regular.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvSpeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSpeed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
